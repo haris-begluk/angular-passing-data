@@ -7,10 +7,12 @@ import { Component, Output, EventEmitter } from "@angular/core";
 })
 export class ChildComponent {
   message: string = "Hello from Child";
+  counter = 0;
   @Output()
   messageEvent = new EventEmitter<string>();
 
   sendMessage() {
-    this.messageEvent.emit(this.message);
+    let newmessage = this.message + " " + (this.counter += 1).toString();
+    this.messageEvent.emit(newmessage);
   }
 }

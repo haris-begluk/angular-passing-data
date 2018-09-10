@@ -1,7 +1,5 @@
-<div class="row">
-  <div [style.background-color]="'lightblue'" class="col-md-6 offset-3">
-    <h1>Parent</h1>
-    Message: {{message}}
-    <app-child (messageEvent)="receiveMessage($event)"></app-child>
-  </div>
+<div [style.background-color]="'lightblue'" [style.height]="'200px'" class="col">
+  <h1>Parent</h1>
+  Message: {{message}}
+  <app-child (messageEvent)="receiveMessage($event)"></app-child>
 </div>
